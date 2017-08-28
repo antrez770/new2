@@ -1,0 +1,11 @@
+﻿<h1>Hi {{vm.user.firstName}}!</h1>
+<p>You're logged in!!</p>
+<h2>All registered users:</h2>
+<ul>
+    <li ng-repeat="user in vm.allUsers">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a ng-click="vm.deleteUser(user.id)">Delete</a>
+    </li>
+</ul>
+<div class="btn btn-warning span8"><a href="../angular_crud/"> CRUD EDIT</a></div>
+<p><a href="#!/login" class="btn btn-primary">Logout</a></p>
